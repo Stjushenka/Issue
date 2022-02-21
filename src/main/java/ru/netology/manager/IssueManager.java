@@ -7,6 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Predicate;
+import java.util.Comparator;
 
 public class IssueManager {
     private IssueRepository repository;
@@ -30,14 +31,16 @@ public class IssueManager {
     public List<Issue> sortByNewest() {
         Comparator byNewest = Comparator.naturalOrder();
         ArrayList<Issue> issues = new ArrayList<>(repository.findAll());
-        issues.sort(byNewest);
+        issues.sort(Comparator.naturalOrder());
         return issues;
+
+
     }
 
     public List<Issue> sortByOldest() {
-        Comparator byNewest = Comparator.reverseOrder();
+        Comparator byOldest  = Comparator.reverseOrder();
         ArrayList<Issue> issues = new ArrayList<>(repository.findAll());
-        issues.sort(byNewest);
+        issues.sort(Comparator.reverseOrder());
         return issues;
     }
 
