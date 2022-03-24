@@ -118,7 +118,7 @@ class IssueManagerTest {
     void shouldReturnEmptyWhenFindByAssignee() {
         manager.issueAdd(issue1);
         Collection<Issue> expected = new ArrayList<>();
-        Collection<Issue> actual = manager.findByAssignee(new HashSet<String>(Arrays.asList("emma")));
+        Collection<Issue> actual = manager.findByAssignee(new HashSet<String>(Arrays.asList("lena")));
         assertEquals(expected, actual);
     }
 
