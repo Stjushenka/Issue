@@ -1,4 +1,5 @@
 package ru.netology.manager;
+
 import ru.netology.domain.Issue;
 import ru.netology.repository.IssueRepository;
 
@@ -38,7 +39,7 @@ public class IssueManager {
     }
 
     public List<Issue> sortByOldest() {
-        Comparator byOldest  = Comparator.reverseOrder();
+        Comparator byOldest = Comparator.reverseOrder();
         ArrayList<Issue> issues = new ArrayList<>(repository.findAll());
         issues.sort(Comparator.reverseOrder());
         return issues;

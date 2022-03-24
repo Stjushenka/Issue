@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import ru.netology.manager.IssueManager;
 import ru.netology.domain.Issue;
 import ru.netology.repository.IssueRepository;
 
